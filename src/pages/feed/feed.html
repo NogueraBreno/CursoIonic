@@ -15,6 +15,42 @@
 
 <ion-content padding>
 
-<h1> Username</h1>
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/imgs/photo.png">
+    </ion-avatar>
+    <h2 class="feed_title">{{username}}</h2>
+    <p class="feed_date">November 5, 1955</p>
+  </ion-item>
+
+  <img src="assets/imgs/photo.png">
+
+  <ion-card-content>
+    <p>Não aguenta 10 minutos de porrada comigo!</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
 
 </ion-content>
