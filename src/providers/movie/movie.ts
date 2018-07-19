@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 /*
   Generated class for the MovieProvider provider.
@@ -12,11 +13,17 @@ export class MovieProvider {
 
     private baseApiPath = "https://api.themoviedb.org/3";
 
-  constructor(public http: HttpClient) {
+  constructor(public http: Http) {
     console.log('Hello MovieProvider Provider');
   }
 
   getLatestMovies(){
-    this.http.get(this.baseApiPath + "/movie/latest")
+   return this.http.get(this.baseApiPath + "/movie/popular?api_key=" + this.getApiKey());
+
   }
+
+getApiKey(): string{
+  return "62fe66432770e3e393fa1250737df959"
+}
+
 }
